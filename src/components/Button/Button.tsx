@@ -7,10 +7,10 @@ export interface ButtonProps {
   type?: "button" | "submit" | "reset";
 }
 
-const button = cva("button", {
+const button = cva("font-corp", {
   variants: {
     intent: {
-      primary: ["bg-primary", "hover:bg-", "text-white", "rounded-full"],
+      primary: ["bg-primary", "hover:bg-green", "text-white", "rounded-full"],
       secondary: [
         "bg-white",
         "text-gray-800",

@@ -15,7 +15,7 @@ const Home = () => {
   console.log({ user });
   return (
     <Layout size="large">
-      <h1>Home</h1>
+      <h1 className="font-corp">Home</h1>
       {user.name && <h2>Hello, {user?.name}</h2>}
 
       {time < expirationTime * 1000 && (

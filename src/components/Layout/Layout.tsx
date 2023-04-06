@@ -10,7 +10,7 @@ const layout = cva("flex flex-col", {
   variants: {
     size: {
       screen:["w-screen"],
-      large: ["w-full md:px-16 px-4"],
+      large: ["w-full md:px-16 px-4 pt-8 md:pt-40"],
       medium: ["w-3/5 md:px-16 px-4"]
     }
   }

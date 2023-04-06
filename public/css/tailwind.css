@@ -490,6 +490,9 @@ video {
 .z-40 {
   z-index: 40;
 }
+.z-50 {
+  z-index: 50;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -497,8 +500,32 @@ video {
 .mt-3 {
   margin-top: 0.75rem;
 }
+.flex {
+  display: flex;
+}
+.w-3\/5 {
+  width: 60%;
+}
+.w-full {
+  width: 100%;
+}
+.w-screen {
+  width: 100vw;
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-end {
+  align-items: flex-end;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-2 {
+  gap: 0.5rem;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -508,6 +535,13 @@ video {
 }
 .rounded-lg {
   border-radius: 0.5rem;
+}
+.border-b-4 {
+  border-bottom-width: 4px;
+}
+.bg-gray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 82 82 / var(--tw-bg-opacity));
 }
 .bg-primary {
   --tw-bg-opacity: 1;
@@ -525,6 +559,10 @@ video {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -539,8 +577,18 @@ video {
 .pt-5 {
   padding-top: 1.25rem;
 }
+.pt-8 {
+  padding-top: 2rem;
+}
 .text-left {
   text-align: left;
+}
+.font-corp {
+  font-family: Questrial, sans-serif;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .text-base {
   font-size: 1rem;
@@ -570,6 +618,10 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.hover\:bg-green:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 241 192 / var(--tw-bg-opacity));
+}
 @media (min-width: 480px) {
 
   .sm\:my-8 {
@@ -587,5 +639,21 @@ video {
 
   .sm\:p-6 {
     padding: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .md\:pt-40 {
+    padding-top: 10rem;
   }
 }
