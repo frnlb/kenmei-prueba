@@ -8,11 +8,9 @@ import Layout from "components/Layout/Layout";
 
 const Home = () => {
   const expirationTime = 1500;
-  const { time, setTime, setStartCountdown, startCountdown } =
+  const { time, setStartCountdown, startCountdown } =
     useCountdown(expirationTime);
   const { user, setUser } = useContext(UserContext);
-  console.log("time", time);
-  console.log({ user });
   return (
     <Layout size="large">
       <h1 className="font-corp">Home</h1>
