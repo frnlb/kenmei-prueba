@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
-import Button from "../src/components/Button/Button";
-import useCountdown from "../src/hooks/useCountdown";
+import Button from "components/Button/Button";
+import useCountdown from "hooks/useCountdown";
 import Popup from "components/Popup/Popup";
 import UserForm from "components/UserForm/UserForm";
 import UserContext from "hooks/userContext";
+import Layout from "components/Layout/Layout";
 
 const Home = () => {
   const expirationTime = 15;
@@ -13,7 +14,7 @@ const Home = () => {
   console.log("time", time);
   console.log({ user });
   return (
-    <div className="bg-red-400">
+    <Layout>
       <h1>Home</h1>
       {user.name && <h2>Hello, {user?.name}</h2>}
 
@@ -40,7 +41,7 @@ const Home = () => {
         }
         disable={time > 0 && startCountdown}
       />
-    </div>
+    </Layout>
   );
 };
 
