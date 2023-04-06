@@ -4,6 +4,7 @@ import Home from "./Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { UserProvider } from "hooks/userContext";
 import Header from "components/Header/Header";
+import About from "./About";
 
 const LINKS = [
   { name: "home", href: "/" },
@@ -18,6 +19,7 @@ const App: React.FC = () => {
         <Header links={LINKS}/>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </UserProvider>
     </BrowserRouter>

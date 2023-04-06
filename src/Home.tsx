@@ -7,12 +7,10 @@ import UserContext from "hooks/userContext";
 import Layout from "components/Layout/Layout";
 
 const Home = () => {
-  const expirationTime = 15;
-  const { time, setTime, setStartCountdown, startCountdown } =
+  const expirationTime = 1500;
+  const { time, setStartCountdown, startCountdown } =
     useCountdown(expirationTime);
   const { user, setUser } = useContext(UserContext);
-  console.log("time", time);
-  console.log({ user });
   return (
     <Layout size="large">
       <h1 className="font-corp">Home</h1>
@@ -20,13 +18,15 @@ const Home = () => {
 
       {time < expirationTime * 1000 && (
         <Popup>
-          {time}
-
+          <div className="flex justify-between mb-6">
+                      <p className="text-xs">Quedan {time/1000} segundos</p>
           <Button
             onClick={() => setStartCountdown(false)}
-            label={"Close window"}
+            label={"Cerrar"}
             disable={false}
           />
+          </div>
+
           <UserForm
             user={user}
             editUser={setUser}

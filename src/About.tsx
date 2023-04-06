@@ -1,19 +1,15 @@
+import { Layout } from "components";
 import React, { useContext } from "react";
 import UserContext from "./hooks/userContext";
 
-const Test = () => {
-  const { user, setUser } = useContext(UserContext);
-
-  console.log("user", user);
-
+const About = () => {
+  const { user } = useContext(UserContext);
   return (
-    <div>
-      <h1>{user?.name}</h1>
-      <button
-        onClick={() => setUser && setUser({ name: "Pepe", email: "pepe@pepe" })}
-      ></button>
-    </div>
+    <Layout size="large">
+      <h1>This is the about page </h1>
+     {user?.name ==="" ? <h1 className="flex justify-center">Deberías registrate</h1> : <h1>Hola, {user?.name}!</h1>}
+    </Layout>
   );
 };
 
-export default Test;
+export default About;
