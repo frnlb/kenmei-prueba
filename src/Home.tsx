@@ -7,7 +7,7 @@ import UserContext from "hooks/userContext";
 import Layout from "components/Layout/Layout";
 
 const Home = () => {
-  const expirationTime = 15;
+  const expirationTime = 1500;
   const { time, setTime, setStartCountdown, startCountdown } =
     useCountdown(expirationTime);
   const { user, setUser } = useContext(UserContext);
