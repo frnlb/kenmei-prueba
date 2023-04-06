@@ -12,10 +12,12 @@ module.exports = {
             'primary': '#00AEEA',
             'green': '#A8F1C0',
             'white': '#fff',
+            'gray': '#525252'
           },
           fontFamily: {
             sans: ['Graphik', 'sans-serif'],
             serif: ['Merriweather', 'serif'],
+            corp: ['Questrial', 'sans-serif']
           },
           extend: {
             spacing: {
