@@ -1,4 +1,4 @@
-import React, { Children, useState } from "react";
+import React from "react";
 import Button from "components/Button/Button";
 import { UserContextProps } from "../../hooks/userContext";
 
@@ -23,20 +23,21 @@ const UserForm = ({ onSubmit, valid, editUser, user }: UserFormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form onSubmit={handleSubmit} className="flex flex-col py-4">
+      <label className="p-2">
         Nombre:
-        <input name="name" onChange={handleChange} value={user?.name} />
+        <input name="name" onChange={handleChange} value={user?.name} className="border-b-[1px] w-full"/>
       </label>
-      <label>
+      <label className="p-2">
         Email:
-        <input name="email" value={user?.email} onChange={handleChange} />
-        <Button
+        <input name="email" value={user?.email} onChange={handleChange} className="border-b-[1px] w-full"/>
+        <div className="flex justify-center p-3">
+          <Button
           type="submit"
           disable={user?.email === "" && user?.name === ""}
           intent="primary"
           label="ENVIAR"
-        />
+        /></div>
       </label>
     </form>
   );

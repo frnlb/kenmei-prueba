@@ -18,13 +18,15 @@ const Home = () => {
 
       {time < expirationTime * 1000 && (
         <Popup>
-          {time}
-
+          <div className="flex justify-between mb-6">
+                      <p className="text-xs">Quedan {time/1000} segundos</p>
           <Button
             onClick={() => setStartCountdown(false)}
-            label={"Close window"}
+            label={"Cerrar"}
             disable={false}
           />
+          </div>
+
           <UserForm
             user={user}
             editUser={setUser}
